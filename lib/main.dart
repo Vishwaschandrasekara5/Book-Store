@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
           shadowColor: Colors.yellow,
           title: const Text(
-            "Black Hole",
+            "Book Store",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900),
           ),
           actions: [
@@ -40,19 +40,15 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.w500),
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Center(
                   child: Image.asset(
-                    "assets/space1.png",
+                    "assets/book1.jpeg",
                     height: 300,
                     scale: 2,
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
@@ -62,9 +58,7 @@ class MyApp extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(
-                  height: 100,
-                ),
+                const SizedBox(height: 100),
                 GestureDetector(
                   onTap: () {},
                   child: Center(
@@ -81,16 +75,11 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
-                //second page
+                const SizedBox(height: 50),
                 Center(
-                  child: Image.asset("assets/space2.png"),
+                  child: Image.asset("assets/book2.jpg"),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
@@ -99,63 +88,32 @@ class MyApp extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
+                    children: List.generate(
+                      5,
+                      (index) => Container(
                         height: 50,
                         width: 50,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange),
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.primaries[index % Colors.primaries.length],
+                        ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: const Color.fromARGB(255, 37, 25, 7)),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: const Color.fromARGB(255, 2, 65, 30)),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: const Color.fromARGB(255, 42, 4, 180)),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: const Color.fromARGB(255, 221, 5, 70)),
-                      )
-                    ],
+                    ),
                   ),
                 ),
-                //third screen
                 Center(
                   child: Image.asset(
-                    "assets/space3.png",
+                    "assets/book3.png",
                     height: 300,
                     scale: 2,
                   ),
                 ),
-                const SizedBox(
-                  height: 40,
-                ),
+                const SizedBox(height: 40),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
@@ -164,9 +122,7 @@ class MyApp extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 GestureDetector(
                   onTap: () {},
                   child: Center(
@@ -185,31 +141,28 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(height: 20),
                 Container(
                   height: 5,
                   width: 500,
-                  decoration: const BoxDecoration(
-                   color: Colors.white30 
-                  ),
+                  color: Colors.white30,
                 ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
-                  child:  Text("Black Hole", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                  ),),
+                  child: Text(
+                    "Black Hole",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
                 const Text(
-                  "A black hole is a region in space where gravity is so strong that nothing, not even light, can escape. Formed when massive stars collapse under their own gravity, black holes warp space and time. They remain mysterious, drawing scientists to study their properties and uncover the secrets of the universe.",style: TextStyle(
-                    color: Colors.white
-                  ),
+                  "A black hole is a region in space where gravity is so strong that nothing, not even light, can escape. Formed when massive stars collapse under their own gravity, black holes warp space and time. They remain mysterious, drawing scientists to study their properties and uncover the secrets of the universe.",
+                  style: TextStyle(color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(
-                  height: 10,
-                )
+                const SizedBox(height: 10),
               ],
             ),
           ),
